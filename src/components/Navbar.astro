@@ -1,0 +1,44 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<nav>
+    <div class="logo">
+        <p>Lorem, ipsum.</p>
+    </div>
+    <ul class="nav-links">
+        <li><a href="">About Me</a></li>
+        <li><a href="">Projects</a></li>
+        <li><a href="">Contact</a></li>
+    </ul>
+    <div class="theme-switch">
+        <Icon name="mdi:moon-and-stars"/>
+    </div>
+</nav>
+
+<style>
+    nav {
+        display: flex;
+        flex-direction: row;
+        color: #cfcfcf;
+        justify-content: space-between;
+    }
+    nav ul {
+        list-style-type: none;
+        padding-left: 0;
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+    nav ul li a {
+        color: #cfcfcf;
+        text-decoration: none;
+        font-size: 1.7em;
+        transition: all .3s ease-out;
+    }
+    nav ul li a:hover {
+        text-shadow: 0 0 6px #0916a3;
+        color: #23b9db;
+        text-decoration: overline #cfcfcf;
+        }
+</style>
