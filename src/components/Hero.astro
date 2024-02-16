@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import me from "../assets/me.webp"; // change to icon
+import me from "../assets/images/me.png";
 ---
 
 <section class="hero">
@@ -11,10 +11,7 @@ import me from "../assets/me.webp"; // change to icon
         </div>
     </div>
     <div class="hero-image">
-        <img src="../assets/images/die3fragezeichen.avif" alt="Lernparty@LUG"
-        width="1080"
-        height="720"
-        style="height: 720px; width: 1080px;">
+        <Image src={me} alt="text" id={"me-image"}/>
     </div>
 </section>
     
@@ -23,6 +20,7 @@ import me from "../assets/me.webp"; // change to icon
         margin-bottom: 4rem;
         display: flex;
         flex-direction: row;
+        height: 80vh;
     }
 
     section.hero > div.hero-text {
@@ -35,8 +33,9 @@ import me from "../assets/me.webp"; // change to icon
     .hero-text p {
         max-width: 45ch;
     }
-    .hero-image > img {
-        object-fit: none;
+    .hero-image > #me-image {
+        object-fit: cover;
+        width: 40%;
         height: auto;
         overflow-x: hidden;
     }
