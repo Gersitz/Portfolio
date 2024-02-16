@@ -16,6 +16,9 @@
     "typescript": "^5.3.3"
   },
   "devDependencies": {
+    "@iconify-json/devicon-plain": "^1.1.34",
+    "@iconify-json/file-icons": "^1.1.8",
+    "@iconify-json/line-md": "^1.1.36",
     "@iconify-json/mdi": "^1.1.64"
   }
 }
