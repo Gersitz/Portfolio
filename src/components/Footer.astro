@@ -13,47 +13,62 @@ import { Icon } from "astro-icon/components";
         <li><a href="">Text</a></li>
     </ul>
     <ul>
-        <li><a href=""><Icon name="line-md:github-loop"></a></li>
-        <li><a href=""><Icon name="line-md:twitter-x-alt"></a></li>
-        <li><a href=""><Icon name="line-md:facebook"></a></li>
-        <li><a href=""><Icon name="line-md:linkedin"></a></li>
+        <li>
+            <a href=""><Icon name="line-md:github-loop" /></a>
+            <li>
+                <a href=""><Icon name="line-md:twitter-x-alt" /></a>
+                <li>
+                    <a href=""><Icon name="line-md:facebook" /></a>
+                    <li><a href=""><Icon name="line-md:linkedin" /></a></li>
+                    <p>Copyright ©2024 All rights reserved</p>
+                </li>
+
+                <style>
+                    [data-icon] {
+                        width: 40px;
+                        height: auto;
+                    }
+                    footer {
+                        position: block;
+                        width: 100%;
+                        font-family: "Segoe UI", Tahoma, Geneva, Verdana,
+                            sans-serif;
+                        text-align: center;
+                        margin-top: 10px;
+                    }
+
+                    footer ul {
+                        list-style: none;
+                        margin: 20px;
+                        padding: 0;
+                    }
+
+                    footer ul > li {
+                        display: inline;
+                        padding-inline: 10px 10px;
+                    }
+
+                    footer a {
+                        text-decoration: none;
+                        font-size: 1.5rem;
+                        color: gold;
+                        transition: color 0.3s ease;
+                        text-shadow: 0 0 4px rgba(255, 217, 0, 0.75);
+                    }
+
+                    footer a:hover {
+                        color: chocolate;
+                    }
+                    html.light footer a {
+                        text-shadow: 1px 1px 2px black;
+                        outline: 2px black;
+                    }
+                    html.light footer [data-icon] {
+                        filter: drop-shadow(0 0 .8px black);
+                        font-size: 1.4em;
+                    }
+                </style>
+            </li>
+        </li>
     </ul>
-    <p>Copyright ©2024 All rights reserved</p>
 </footer>
-
-<style>
-    [data-icon] {
-        width: 40px;
-        height: auto;
-    }
-    footer {
-        z-index: -10;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        color: white;
-        text-align: center;
-        margin-top: 10px;
-    }
-
-    footer ul {
-        list-style: none;
-        margin: 20px;
-        padding: 0;
-    }
-
-    footer ul>li {
-        display: inline;
-        padding-inline: 10px 10px;
-    }
-
-    footer a {
-        text-decoration: none;
-        color: gold;
-        transition: color .3s ease;
-    }
-
-    footer a:hover {
-        color: chocolate;
-    }
-</style>
