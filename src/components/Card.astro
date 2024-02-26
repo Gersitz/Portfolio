@@ -21,8 +21,8 @@ const { image, alt, title, body } = Astro.props;
     <svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <linearGradient id="gradient" x1="0%" x2="0%" y1="0%" y2="100%">
-          <stop offset="0%" stop-color="#fc46d5"></stop>
-          <stop offset="100%" stop-color="#2a73f5"></stop>
+          <stop offset="0%" stop-color="#e4f004"></stop>
+          <stop offset="100%" stop-color="#d9dcc7"></stop>
         </linearGradient>
       </defs>
       <path
@@ -62,6 +62,7 @@ const { image, alt, title, body } = Astro.props;
     bottom: 0;
     width: 100%;
     height: 100%;
+    color: black;
   }
   .text-box > h3 {
     margin-top: 5em;
@@ -74,7 +75,6 @@ const { image, alt, title, body } = Astro.props;
     padding: 0 1rem;
   }
   html.dark .text-box > * {
-    text-shadow: 0 0 4px black;
   }
   svg {
     stroke-width: 1px;
@@ -85,7 +85,7 @@ const { image, alt, title, body } = Astro.props;
     width: 100%;
     height: 100%;
     margin-top: .3rem;
-    filter: drop-shadow(0 0 10px #fc46d5);
+    filter: drop-shadow(0 0 10px #e4f004);
     z-index: -1;
   }
   .card:hover .swipe-up {
