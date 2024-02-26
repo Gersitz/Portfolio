@@ -66,7 +66,7 @@ import me from "../assets/images/me.png";
         margin: 0 0 1rem 0;
     }
     .hero-text p {
-        max-width: 45ch;
+        /* max-width: 45ch; */
         font-size: 1.1em;
     }
     .hero-image > #me-image {
@@ -79,6 +79,7 @@ import me from "../assets/images/me.png";
             flex-direction: column;
             font-size: .9em;
             height: fit-content;
+            align-items: center;
         }
         section.hero > div.hero-text {
             max-width: none;
@@ -88,6 +89,9 @@ import me from "../assets/images/me.png";
         section.hero > div.hero-image {
             width: 100%;
             position: static;
+            align-items: center;
+            display: flex;
+            justify-content: center;
         }
         .hero-text p {
             width: 100%;
