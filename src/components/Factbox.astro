@@ -1,0 +1,77 @@
+---
+interface Props {}
+
+const langs = [
+    {
+        lang: "ger",
+        label: "Deutsch",
+    },
+    {
+        lang: "eng",
+        label: "English",
+    }
+]
+---
+
+<div class="fact-box">
+    <div class="outer-box">
+        <select data-select-lang name="lang" id="lang">
+            {
+                langs.map(entry => <option value={entry.lang} label={entry.label}/>)
+            }
+        </select>
+        <div class="inner-box">
+            <p data-fact class="fact">...</p>
+        </div>
+    </div>
+    <button data-submit-fact>Get a random fact about cats</button>
+</div>
+
+<script defer>
+    const submitFactButtonElement =
+        document.querySelector("[data-submit-fact]");
+    const factTextElement = document.querySelector("[data-fact]");
+    const selectLanguageElement = document.querySelector('[data-select-lang')
+
+    submitFactButtonElement.addEventListener("click", () => {
+        const baseUrl = "https://meowfacts.herokuapp.com/?lang=";
+        const url = baseUrl + selectLanguageElement.value
+        fetch(url).then(httpResponse => {
+            return httpResponse.json();
+        }).then(jsonData => {
+            factTextElement.innerHTML = jsonData.data[0];
+        });
+    });
+</script>
+
+<style>
+    .fact-box {
+        display: flex;
+        flex-direction: column;
+    }
+    .fact-box > button {
+        align-self: stretch;
+        font-size: 1.5em;
+        padding: 1rem 0;
+        background-color: gold;
+        border: 2px solid darkgoldenrod;
+        border-radius: 0 0 1rem 1rem;
+        text-shadow: 0 0 5px darkorange;
+    }
+    .outer-box {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        background-color: rgba(74, 74, 74, 0.5);
+        border-radius: 1rem 1rem 0 0;
+    }
+    .outer-box > select {
+        align-self: start;
+    }
+    .inner-box {
+        padding: 1.5rem;
+        margin: 1rem 0;
+        background-color: rgba(200, 200, 200, 0.3);
+        border-radius: 0.5rem;
+    }
+</style>
